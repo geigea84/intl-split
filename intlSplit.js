@@ -5,7 +5,7 @@ const cartonTwo = document.querySelector("#cartonTwo");
 
 function getRIDValues() {
     let values = ta.value.split("\n");
-    values = values.filter(function(el) {
+    values = values.filter(function (el) {
         return el != "";
     });
     console.log(values);
@@ -20,18 +20,19 @@ function findDuplicates(values) {
     let appendLiEl;
 
     for (let i = 0; i < tempArray.length; i++) {
+        let tai = tempArray[i]
         if (tempArray[i + 1] == tempArray[i]) {
-            duplicates.push(tempArray[i]);
+            duplicates.push(tai);
             console.log("dup " + duplicates);
             appendLiEl = document.createElement("li");
-            appendLiEl.textContent = duplicates[i];
+            appendLiEl.textContent = tai;
             cartonOne.appendChild(appendLiEl);
         }
-        else if (tempArray[i + 1] !== tempArray[i]) {
-            nonDuplicates.push(tempArray[i]);
+        if (duplicates.includes(tai) == false) {
+            nonDuplicates.push(tai);
             console.log("non " + nonDuplicates);
             appendLiEl = document.createElement("li");
-            appendLiEl.textContent = nonDuplicates[i];
+            appendLiEl.textContent = tai;
             cartonTwo.appendChild(appendLiEl);
         }
     }
