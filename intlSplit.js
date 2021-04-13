@@ -1,5 +1,6 @@
 const ta = document.querySelector("#textarea");
 const btn = document.querySelector("#button");
+const reset = document.querySelector("#reset");
 const cartonOne = document.querySelector("#cartonOne");
 const cartonTwo = document.querySelector("#cartonTwo");
 
@@ -39,4 +40,10 @@ function findDuplicates(values) {
     ta.value = "";
 }
 
+function resetValues() {
+    cartonOne.innerHTML = "";
+    cartonTwo.innerHTML = "";
+}
+
 btn.addEventListener("click", getRIDValues);
+reset.addEventListener("click", resetValues);
