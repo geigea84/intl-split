@@ -1,0 +1,27 @@
+#enter {
+    display: block;
+    padding-bottom: 20px;
+}
+
+#carton-container {
+    width: 50%;
+    margin: auto;
+}
+
+.cartons, h5 {
+    width: 50%;
+    display: inline;
+}
+
+#cartonOne {
+    padding-right: 100px;
+}
+
+#cartonTwo {
+    padding-left: 100px;
+}
+
+li {
+    width: 50%;
+    margin: auto;
+}
